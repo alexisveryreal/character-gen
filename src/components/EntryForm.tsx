@@ -18,6 +18,7 @@ const formSchema = z.object({
   summonText: z.string().min(2, {
     message: "Summon text must be at least 2 characters.",
   }),
+  emoji: z.string(),
 });
 
 type FormSchema = z.infer<typeof formSchema>;
@@ -29,6 +30,7 @@ export const EntryForm = () => {
     schema: formSchema,
     defaultValues: {
       summonText: "",
+      emoji: "",
     },
   });
 
@@ -60,6 +62,23 @@ export const EntryForm = () => {
               </FormControl>
               <FormDescription>
                 This is the text that will be inside the summon circle.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="emoji"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Emoji</FormLabel>
+              <FormControl>
+                <Input placeholder="any emoji here" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is the emoji that wil make up the summon circle.
               </FormDescription>
               <FormMessage />
             </FormItem>

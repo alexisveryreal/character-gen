@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { EntryForm } from "~/components/EntryForm";
+import { Container } from "~/components/ui/container";
 
 const Home: NextPage = () => {
   return (
@@ -12,12 +13,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-white to-slate-200">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-slate-950 sm:text-[5rem]">
-            Emoji Summon Generator
-          </h1>
+        <Container>
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h2 className="my-2 w-full text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Emoji summon generator
+            </h2>
+          </div>
           <EntryForm />
-        </div>
+        </Container>
       </main>
     </>
   );
