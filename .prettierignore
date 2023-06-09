@@ -1,0 +1,5 @@
+node_modules/**
+.next
+.vercel
+.github
+pnpm-lock.yaml
