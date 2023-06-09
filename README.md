@@ -18,5 +18,6 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 - perhaps do some markdown gen?
 
+- have an app where you can build it yourself?
 
 
